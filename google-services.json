@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "815769641078",
+    "project_id": "wallet-9d07f",
+    "storage_bucket": "wallet-9d07f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815769641078:android:addd1c56d8396fc4c7ff57",
+        "android_client_info": {
+          "package_name": "com.wendtoin.wallet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5yZ2i-kGfkkIrBspYpIyAoZK_Mjx-Djk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
