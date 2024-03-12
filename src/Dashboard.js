@@ -1,11 +1,11 @@
-import React, {useState} from "react";
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from "react-native";
+import React from "react";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import auth from "@react-native-firebase/auth"
 import { useNavigation } from "@react-navigation/native";
 
 
 
-export default function Dashbord(){
+export default function Dashboard(){
     const navigation = useNavigation();
 
     const handleLogout = async () =>{
@@ -18,10 +18,9 @@ export default function Dashbord(){
                 routes: [{name: "Login"}],
             })
         } catch (error) {
-            console.log("Error during logout : ", error);
+            // console.log("Error during logout : ", error);
+            console.log("Erreur lors de la connexion : ", error);
         }
-
-
     };
 
     return(
@@ -37,6 +36,43 @@ export default function Dashbord(){
             >
                 Welcome to the Dashbord
             </Text>
+{/* 
+
+
+            // Exemple de bouton d'envoi de paiements dans le tableau de bord
+<TouchableOpacity
+    onPress={() => navigation.navigate("SendPayments")}
+    style={styles.button}
+>
+    <Text style={styles.buttonText}>Envoyer des paiements</Text>
+</TouchableOpacity>
+
+// Exemple de bouton d'accès à l'historique des transactions dans le tableau de bord
+<TouchableOpacity
+    onPress={() => navigation.navigate("TransactionHistory")}
+    style={styles.button}
+>
+    <Text style={styles.buttonText}>Historique des transactions</Text>
+</TouchableOpacity>
+
+// Exemple de bouton d'accès à la gestion du compte dans le tableau de bord
+<TouchableOpacity
+    onPress={() => navigation.navigate("AccountManagement")}
+    style={styles.button}
+>
+    <Text style={styles.buttonText}>Gestion du compte</Text>
+</TouchableOpacity>
+
+// Exemple de bouton d'accès au support technique dans le tableau de bord
+<TouchableOpacity
+    onPress={() => navigation.navigate("Support")}
+    style={styles.button}
+>
+    <Text style={styles.buttonText}>Support technique</Text>
+</TouchableOpacity> */}
+
+
+
 
             <TouchableOpacity
                 onPress={handleLogout}
@@ -53,6 +89,8 @@ export default function Dashbord(){
                     logout
                 </Text>
             </TouchableOpacity>
+
+
         </View>
-    )
+    );
 }

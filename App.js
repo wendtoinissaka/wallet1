@@ -3,8 +3,8 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Login from './src/Login';
-import Details from './src/Details';
-import Dashbord from './src/Dashbord';
+import SignUpScreen from './src/SignUpScreen';
+import Dashboard from './src/Dashboard';
 
 const Stack = createStackNavigator();
 
@@ -13,22 +13,22 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Login'>
       <Stack.Screen
-          name='Login'
+          name="Login"
           component={Login}
           options={{ headerShown:false}}
           />
          <Stack.Screen
-          name='Details'
-          component={Details}
+          name="SignUpScreen"
+          component={SignUpScreen}
           options={{ headerShown:false}}
           />
           <Stack.Screen
-          name='Dashbord'
-          component={Dashbord}
+          name="Dashboard"
+          component={Dashboard}
           options={{ headerShown:false}}
           />
          
       </Stack.Navigator>
     </NavigationContainer>
-  )
+  );
 }
