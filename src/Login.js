@@ -103,6 +103,9 @@ export default function Login(){
                 {/* phone Number Authentification Using Firebase */}
     {/* <Image source={FredoomIcon} style={{ width: 75, height: 100,  }} /> */}
 
+
+
+
             </Text>
 
             {!confirm ?(
