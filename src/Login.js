@@ -1,12 +1,12 @@
 import React, {useState} from "react";
-import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, Image, Linking } from "react-native";
 import auth from "@react-native-firebase/auth"
 // import firebase from "@react-native-firebase/firestore";
 import { useNavigation } from "@react-navigation/native";
 import firestore from '@react-native-firebase/firestore';
 // import { MaterialIcons } from 'react-native-material-icons';
+import { MaterialIcons } from '@expo/vector-icons'; 
 
-import { Linking } from 'react-native';
 
 export default function Login(){
     const [phoneNumber, setPhoneNumber] = useState("");
@@ -155,7 +155,8 @@ export default function Login(){
                     <Text
                         style={{
                             marginBottom:20,
-                            fontSize:18
+                            fontSize:18,
+                            
                         }}
                     >
                         {/* Enter the code send to your phone : */}
@@ -170,6 +171,7 @@ export default function Login(){
                                 paddingHorizontal:10,
                         }}
                         placeholder="Entrer le code "
+                        keyboardType="numeric"
                         value={code}
                         onChangeText={setCode}
                         />
@@ -195,12 +197,45 @@ export default function Login(){
 
 <View style={{ flexDirection: 'row', justifyContent: 'space-around', width: '100%' }}>
   <TouchableOpacity onPress={handleWhatsAppContact}>
-    <Image source={WhatsAppIcon} style={{ width: 75, height: 75 }} />
+    <Image source={WhatsAppIcon} style={{ width: 50, height: 50 }} />
   </TouchableOpacity>
 
   <TouchableOpacity onPress={handleEmailContact}>
-    <Image source={EmailIcon} style={{ width: 75, height: 75 }} />
+    <Image source={EmailIcon} style={{ width: 50, height: 50 }} />
   </TouchableOpacity>
+
+{/* <TouchableOpacity
+  onPress={handleWhatsAppContact}
+  style={{
+    backgroundColor: "#841584",
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 20,
+    alignItems: "center",
+  }}
+>
+  <MaterialIcons name="whatsapp" size={24} color="white" />
+  <Text style={{ color: "white", fontSize: 22, fontWeight: "bold" }}>
+
+  </Text>
+</TouchableOpacity>
+
+<TouchableOpacity
+  onPress={handleEmailContact}
+  style={{
+    backgroundColor: "#841584",
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 20,
+    alignItems: "center",
+  }}
+>
+  <MaterialIcons name="email" size={24} color="white" />
+  <Text style={{ color: "white", fontSize: 22, fontWeight: "bold" }}>
+    Contacter par Email
+  </Text>
+</TouchableOpacity> */}
+
 </View>
         </View>
     );
