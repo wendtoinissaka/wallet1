@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "405638850195",
+    "project_id": "freedom-auth-222e3",
+    "storage_bucket": "freedom-auth-222e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405638850195:android:f69d760f9d3377b589cf66",
+        "android_client_info": {
+          "package_name": "com.lacapacitee.FreedomAPP"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMaAllZ1TQmYEswGIhfSklrXxpraO2JEk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

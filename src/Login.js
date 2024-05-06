@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { View, Text, TextInput, TouchableOpacity, Image, Linking } from "react-native";
 import auth from "@react-native-firebase/auth"
-// import firebase from "@react-native-firebase/firestore";
+// import react-native-firebase/firestore";
 import { useNavigation } from "@react-navigation/native";
 import firestore from '@react-native-firebase/firestore';
 // import { MaterialIcons } from 'react-native-material-icons';
@@ -117,7 +117,7 @@ export default function Login(){
                     }}
                     >
                         {/* Enter your Phone Number : */}
-                        Entrer votre numero de Téléphone your Phone Number :
+                        Entrer votre numero de Téléphone :
                     </Text>
                     <TextInput
                     style={{
@@ -128,7 +128,8 @@ export default function Login(){
                         marginBottom:30,
                         paddingHorizontal:10,
                     }}
-                    placeholder="e.g., +22673535254"
+                    placeholder="+22673535254"
+                    // placeholder="e.g., +22673535254"
                     value={phoneNumber}
                     onChangeText={setPhoneNumber}
                     />
@@ -154,7 +155,7 @@ export default function Login(){
                 <>
                     <Text
                         style={{
-                            marginBottom:20,
+                            
                             fontSize:18,
                             
                         }}
@@ -192,10 +193,9 @@ export default function Login(){
                         </TouchableOpacity>
                 </>
             )}
-    <Text style={{textAlign:'center', margin:15}}>Nous contacter</Text>
-
-
-<View style={{ flexDirection: 'row', justifyContent: 'space-around', width: '100%' }}>
+{/* <View style={{ backgroundColor:'white', width: '100%', marginTop:165,}}>
+<Text style={{textAlign:'center',}}>Nous contacter</Text>
+<View style={{ flexDirection: 'row', justifyContent: 'space-around', backgroundColor:'white', width: '100%',}}>
   <TouchableOpacity onPress={handleWhatsAppContact}>
     <Image source={WhatsAppIcon} style={{ width: 50, height: 50 }} />
   </TouchableOpacity>
@@ -204,39 +204,22 @@ export default function Login(){
     <Image source={EmailIcon} style={{ width: 50, height: 50 }} />
   </TouchableOpacity>
 
-{/* <TouchableOpacity
-  onPress={handleWhatsAppContact}
-  style={{
-    backgroundColor: "#841584",
-    padding: 10,
-    borderRadius: 5,
-    marginBottom: 20,
-    alignItems: "center",
-  }}
->
-  <MaterialIcons name="whatsapp" size={24} color="white" />
-  <Text style={{ color: "white", fontSize: 22, fontWeight: "bold" }}>
-
-  </Text>
-</TouchableOpacity>
-
-<TouchableOpacity
-  onPress={handleEmailContact}
-  style={{
-    backgroundColor: "#841584",
-    padding: 10,
-    borderRadius: 5,
-    marginBottom: 20,
-    alignItems: "center",
-  }}
->
-  <MaterialIcons name="email" size={24} color="white" />
-  <Text style={{ color: "white", fontSize: 22, fontWeight: "bold" }}>
-    Contacter par Email
-  </Text>
-</TouchableOpacity> */}
-
 </View>
+</View> */}
+<View style={{ flex: 1, justifyContent: 'flex-end', marginBottom:50 }}>
+  <View style={{ width: '100%'}}>
+    <Text style={{textAlign:'center'}}>Nous contacter</Text>
+    <View style={{ flexDirection: 'row', justifyContent: 'space-around', width: '100%'}}>
+      <TouchableOpacity onPress={handleWhatsAppContact}>
+        <Image source={WhatsAppIcon} style={{ width: 50, height: 50 }} />
+      </TouchableOpacity>
+      <TouchableOpacity onPress={handleEmailContact}>
+        <Image source={EmailIcon} style={{ width: 50, height: 50 }} />
+      </TouchableOpacity>
+    </View>
+  </View>
+</View>
+
         </View>
     );
 
